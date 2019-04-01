@@ -1,8 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from config.local import system_config
 from database.UserModel import User
 import mongoengine
-import sys
 import redis
 import datetime
 import json

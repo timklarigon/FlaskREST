@@ -12,7 +12,7 @@ def strTimeProp(start, end, format, prop):
 def randomDate(prop):
     return strTimeProp(datetime.datetime(2018, 1, 1), datetime.datetime.now(), '%d/%m/%Y', prop)
 
-def request_data():
+def request_data_post():
     data = json.dumps({"fullname":''.join(random.choice(string.ascii_lowercase) for x in range(10)),
             "birthdate": randomDate(random.random()),
             "gender": 'male' if random.randint(0,1) else 'female'})
@@ -29,5 +29,5 @@ def request_data():
         raise Exception
 
 if __name__ == '__main__':
-    for _ in range(1):
-        request_data()
+    for _ in range(100):
+        request_data_post()
